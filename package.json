@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://angelqtypie.github.io/Siaproject",
+  "homepage": "https://angelqtypie.github.io/Siaproject/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@capacitor/core": "7.2.0",
+    "@ionic/pwa-elements": "^3.3.0",
     "@ionic/react": "^5.9.4",
     "@ionic/react-router": "^5.9.4",
     "@supabase/supabase-js": "^2.49.4",
