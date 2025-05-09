@@ -1,33 +1,38 @@
 import React from 'react';
-import {
-  IonContent,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonButton,
-  IonText,
-  IonFooter,
-  IonPage,
-  IonButtons,
-} from '@ionic/react';
+import { IonContent, IonHeader, IonToolbar, IonTitle, IonButton, IonText, IonFooter, IonPage, IonButtons } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
 import './Home.css';
 
 const Home: React.FC = () => {
+  const history = useHistory();
+
+  const goToLogin = () => {
+    history.push('/login');
+  };
+
+  const goToSignup = () => {
+    history.push('/sign-up');
+  };
+
+  const goToAdminLogin = () => {
+    history.push('/adminlogin');
+  };
+
   return (
     <IonPage>
-      {/* Navbar */}
       <IonHeader>
         <IonToolbar>
           <IonTitle>NBSC</IonTitle>
           <IonButtons slot="end" className="nav-links">
-            <IonButton color="black" routerLink="/login">Login</IonButton>
-            <IonButton color="black" routerLink="/signup">Sign Up</IonButton>
-            <IonButton color="black" routerLink="/adminlogin">Admin</IonButton>
+          <IonButton routerLink="/login" routerDirection="forward">Login</IonButton>
+          <IonButton routerLink="/sign-up" routerDirection="forward">Sign Up</IonButton>
+          <IonButton routerLink="/adminlogin" routerDirection="forward">Admin</IonButton>
+
+
           </IonButtons>
         </IonToolbar>
       </IonHeader>
 
-      {/* Hero Section */}
       <IonContent className="ion-padding">
         <div className="hero-section">
           <h1 className="hero-title">Processing Request System</h1>
@@ -39,8 +44,7 @@ const Home: React.FC = () => {
         </div>
       </IonContent>
 
-      {/* Footer */}
-      <IonFooter >
+      <IonFooter>
         <IonToolbar>
           <IonText className="ion-text-center">
             <p>© 2024 Northern Bukidnon State College. All Rights Reserved.</p>
