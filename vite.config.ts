@@ -10,7 +10,9 @@ export default defineConfig({
     react(),
     legacy()
   ],
-  base: '/Siaproject/',
+
+  base: process.env.NODE_ENV === 'production' ? '/Siaproject/' : '/',
+
   test: {
     globals: true,
     environment: 'jsdom',
