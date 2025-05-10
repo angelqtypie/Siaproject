@@ -11,9 +11,6 @@ export default defineConfig({
     legacy()
   ],
   base: '/Siaproject/',
-  build: {
-    assetsDir: 'assets'
-  },
   test: {
     globals: true,
     environment: 'jsdom',
